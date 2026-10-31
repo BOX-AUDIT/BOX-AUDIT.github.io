@@ -2,9 +2,9 @@
 
 Think inside the box. The money is already in the books.
 
-Box Audit finds money a business has lost to financial leakage and gets it back. Every invoice, contract, payment, and email is read. Clients pay a share of the money actually recovered, and only after the refund or credit lands. Nothing is due upfront.
+Box Audit finds money a business has lost to financial leakage and gets it back. The detection is the innovation: advanced intelligence from AI that runs in house, on Box Audit’s own servers. Client ledgers, contracts, and email are not sent to a cloud model. Every invoice, contract, payment, and email is read, so the detection stays ahead of a hand sample and a ledger-only tool.
 
-This is a recovery audit, not a software seat. Finance teams buy a recovered dollar. A licence asks the client to run a tool and find the leaks themselves. Box Audit does the reading, the matching, and the claim work, and a person approves every claim before it is filed.
+Clients pay a share of the money actually recovered, and only after the refund or credit lands. Nothing is due upfront. A person approves every claim before it is filed.
 
 ## Who it is for
 
@@ -31,7 +31,13 @@ Auditors stay in the loop. The system reads and matches. People approve claims a
 
 The same engine then runs forward. Prevention flags a leak before the payment goes out, so the engagement continues after the backlog is recovered.
 
-Client ledgers, contracts, and email stay on Box Audit’s own servers. They are not sent to a third-party model API.
+## How it is different
+
+Recovery firms sample the ledger by hand. AP software sells a seat, sees the fields already in the system, and leaves the finding to the client. Box Audit runs the detection on its own AI, and the records stay on its own servers.
+
+- **In-house AI.** The model extracts the documents, matches them to the contract and the payment, and investigates whether the mismatch is a real leak. It runs on Box Audit’s own servers.
+- **Nothing goes to a cloud AI.** Ledgers, contracts, and email stay on those machines. They are not sent to a third-party model API.
+- **Detection ahead of the market.** The review is the whole file, including contracts, PDFs, and email. Leaks a sample never opens, and leaks a ledger tool never sees, still get found.
 
 ## Products
 
