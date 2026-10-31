@@ -2,7 +2,7 @@
 
 Think inside the box. The money is already in the books.
 
-Box Audit finds money a business has lost to financial leakage and gets it back. The detection is the innovation: advanced intelligence from AI that runs in house, on Box Audit’s own servers. Client ledgers, contracts, and email are not sent to a cloud model. Every invoice, contract, payment, and email is read, so the detection stays ahead of a hand sample and a ledger-only tool.
+Box Audit finds money a business has lost to financial leakage and gets it back. The detection runs on advanced agentic models, on premise. They are built for this problem: the invoice, the contract, the payment, and the email. The usual recovery audit is still a spreadsheet and a sample.
 
 Clients pay a share of the money actually recovered, and only after the refund or credit lands. Nothing is due upfront. A person approves every claim before it is filed.
 
@@ -33,11 +33,11 @@ The same engine then runs forward. Prevention flags a leak before the payment go
 
 ## How it is different
 
-Recovery firms sample the ledger by hand. AP software sells a seat, sees the fields already in the system, and leaves the finding to the client. Box Audit runs the detection on its own AI, and the records stay on its own servers.
+The market still audits leakage in Excel: a sample of rows, checked by hand. Box Audit runs agentic models on its own machines, designed for the leak.
 
-- **In-house AI.** The model extracts the documents, matches them to the contract and the payment, and investigates whether the mismatch is a real leak. It runs on Box Audit’s own servers.
-- **Nothing goes to a cloud AI.** Ledgers, contracts, and email stay on those machines. They are not sent to a third-party model API.
-- **Detection ahead of the market.** The review is the whole file, including contracts, PDFs, and email. Leaks a sample never opens, and leaks a ledger tool never sees, still get found.
+- **Designed for this problem.** The agents extract the document, match it to the contract and the payment, and investigate whether the mismatch is a real leak.
+- **On premise.** The agentic work runs on Box Audit’s own servers. Client files are handled there.
+- **Ahead of the Excel audit.** The review is the whole file, including contracts, PDFs, and email, and it comes back as a documented finding.
 
 ## Products
 
@@ -54,7 +54,7 @@ Funding terms are often negotiated over email. When the deal that was agreed and
 5. **Trace.** Pin each mismatch to the emails that prove what was agreed.
 6. **Review.** Send the finding to an auditor, with the evidence attached, before any claim is filed.
 
-Email is read on Box Audit’s own servers. It does not leave that environment.
+Email is read by the on-premise agents.
 
 ### Unbox
 
