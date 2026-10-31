@@ -791,12 +791,6 @@ textarea {
   color: var(--paper);
 }
 
-.diff-foot {
-  margin-top: 1.2rem;
-  max-width: 40rem;
-  color: var(--ink);
-}
-
 @media (max-width: 900px) {
   .hero-grid,
   .principles-grid,
