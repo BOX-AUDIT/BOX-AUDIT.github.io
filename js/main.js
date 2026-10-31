@@ -32,14 +32,14 @@ function setError(message) {
 }
 
 if (form) {
-  form.addEventListener("submit", (event) => {
+  const button = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     setError("");
     if (statusEl) statusEl.textContent = "";
 
     const data = new FormData(form);
-    if ((data.get("company_website") || "").toString().trim()) return;
-
     const name = (data.get("name") || "").toString().trim();
     const email = (data.get("email") || "").toString().trim();
     const company = (data.get("company") || "").toString().trim();
@@ -55,25 +55,60 @@ if (form) {
       return;
     }
 
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Company: ${company}`,
-      `Focus: ${focus}`,
-      "",
-      note || "(no note)",
-    ].join("\n");
-
-    const href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      `Leakage scan — ${company}`
-    )}&body=${encodeURIComponent(body)}`;
-
-    if (statusEl) {
-      statusEl.textContent =
-        "Your email app should open with the request. If it does not, write to " +
-        CONTACT_EMAIL +
-        ".";
+    const previousLabel = button ? button.textContent : "";
+    if (button) {
+      button.disabled = true;
+      button.textContent = "Sending…";
     }
-    window.location.href = href;
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/" + encodeURIComponent(CONTACT_EMAIL),
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            company,
+            focus,
+            message: note || "(no note)",
+            _subject: "Leakage scan — " + company,
+            _replyto: email,
+            _template: "table",
+            _captcha: "false",
+          }),
+        }
+      );
+      const result = await response.json().catch(() => ({}));
+      if (String(result.success) === "true") {
+        form.reset();
+        if (statusEl) {
+          statusEl.textContent = "Request sent. We’ll reply at " + email + ".";
+        }
+      } else if (/activ/i.test(result.message || "")) {
+        setError(
+          "One confirmation is still needed. Open the activation email at " +
+            CONTACT_EMAIL +
+            ", then send this request again."
+        );
+      } else {
+        setError(
+          "The request did not send. Write to " + CONTACT_EMAIL + " instead."
+        );
+      }
+    } catch (err) {
+      setError(
+        "The request did not send. Write to " + CONTACT_EMAIL + " instead."
+      );
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = previousLabel;
+      }
+    }
   });
 }
