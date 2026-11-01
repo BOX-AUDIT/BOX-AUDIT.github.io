@@ -89,21 +89,11 @@ if (form) {
         if (statusEl) {
           statusEl.textContent = "Request sent. We’ll reply at " + email + ".";
         }
-      } else if (/activ/i.test(result.message || "")) {
-        setError(
-          "One confirmation is still needed. Open the activation email at " +
-            CONTACT_EMAIL +
-            ", then send this request again."
-        );
       } else {
-        setError(
-          "The request did not send. Write to " + CONTACT_EMAIL + " instead."
-        );
+        setError("The request did not send. Please try again.");
       }
     } catch (err) {
-      setError(
-        "The request did not send. Write to " + CONTACT_EMAIL + " instead."
-      );
+      setError("The request did not send. Please try again.");
     } finally {
       if (button) {
         button.disabled = false;
