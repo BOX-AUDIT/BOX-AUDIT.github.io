@@ -21,57 +21,31 @@ Most of the money is never recovered because the evidence is scattered across in
 
 ## How an engagement works
 
-Auditors stay in the loop. The system reads and matches. People approve claims and deal with the counterparty.
-
-1. **Ingest.** Pull accounts payable and receivable, invoices, contracts, purchase orders, vendor statements, and the related email.
-2. **Extract.** Read PDFs, contracts, spreadsheets, and email threads, and turn them into structured fields.
-3. **Match.** Compare what was paid or billed with the contract, the price list, or proof of delivery. Flag duplicates, overcharges, missed rebates, and unapplied credits.
-4. **Build the claim.** Package each finding with its source documents so an auditor can review and approve it quickly.
-5. **Recover.** File the claim with the vendor, carrier, landlord, or customer, and track it until the money or the credit arrives.
-
-The same engine then runs forward. Prevention flags a leak before the payment goes out, so the engagement continues after the backlog is recovered.
+The file is read. A person signs the claim. Agentic models run on premise, and nothing is filed until someone approves it.
 
 ## How it is different
 
 The market still audits leakage in Excel: a sample of rows, checked by hand. Box Audit runs agentic models on its own machines, designed for the leak.
 
-- **Designed for this problem.** The agents extract the document, match it to the contract and the payment, and investigate whether the mismatch is a real leak.
-- **On premise.** The agentic work runs on Box Audit’s own servers. Client files are handled there.
-- **Ahead of the Excel audit.** The review is the whole file, including contracts, PDFs, and email, and it comes back as a documented finding.
+- **Designed for this problem.** Built for leakage, not for a general audit.
+- **On premise.** The agentic work runs on Box Audit’s own servers.
+- **Ahead of the Excel audit.** A spreadsheet and a sample, set against the whole file.
 
 ## Products
 
-Three tools, one recovery. Inbox Trace and Unbox produce the records. Box Agent investigates them. A person still signs the claim that leaves the building.
+Three tools. One recovery.
 
 ### Inbox Trace
 
-Funding terms are often negotiated over email. When the deal that was agreed and the deal that was applied differ, the proof sits in an inbox nobody audits. Inbox Trace finds those deals and checks that each one was applied the way it was agreed.
-
-1. **Filter.** Keep only the emails that belong to a funding deal.
-2. **Analyse.** Pull parties, items, amounts, rates, dates, and conditions.
-3. **Track.** Link the thread into one deal, from proposal to final terms.
-4. **Compare.** Check the deal agreed against the deal applied in invoices, deductions, or payments.
-5. **Trace.** Pin each mismatch to the emails that prove what was agreed.
-6. **Review.** Send the finding to an auditor, with the evidence attached, before any claim is filed.
-
-Email is read by the on-premise agents.
+Funding terms live in email. Inbox Trace finds where they were not applied as agreed.
 
 ### Unbox
 
-Deal sheets, price files, invoices, and statements arrive in every layout: merged cells, many tabs, scanned pages, tables split across a page break. Unbox pulls the fields that matter out of those Excel files and PDFs and turns them into structured records.
-
-Those records feed the rest of the audit. Inbox Trace compares what was agreed in email with what Unbox reads from the invoices and deal sheets. Mismatches go to an auditor.
+Invoices, contracts, and price files, read as they arrive.
 
 ### Box Agent
 
-Box Agent is an agentic auditor. It does the investigative work end to end and stops just before the claim is written.
-
-- Investigates each mismatch from Inbox Trace and Unbox and works out whether it is a real leak.
-- Gathers the emails, deal sheets, invoices, and payments that support it.
-- Recomputes what should have been paid or billed, and the amount owed back.
-- Hands the auditor a documented finding, ready for a claim.
-
-The human auditor writes and files the claim. Each auditor can handle far more cases. A person signs off on every claim that goes to a counterparty.
+An agentic auditor. It stops before the claim is filed. A person signs what goes out.
 
 ## Where the work starts
 
