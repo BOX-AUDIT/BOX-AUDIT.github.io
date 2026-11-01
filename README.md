@@ -31,6 +31,12 @@ The market still audits leakage in Excel: a sample of rows, checked by hand. Box
 - **On premise.** The agentic work runs on Box Audit’s own servers.
 - **Ahead of the Excel audit.** A spreadsheet and a sample, set against the whole file.
 
+## Secured data handling
+
+Client files are processed on Box Audit’s own servers. The bar is the one finance teams apply under SOC 2: security of the system, confidentiality of the records, and integrity of the result.
+
+Access stays with the engagement. Nothing is filed until a person approves it. That handling does not thin the models or drop the work back to a sample. The whole file is still read.
+
 ## Products
 
 Three tools. One recovery.
