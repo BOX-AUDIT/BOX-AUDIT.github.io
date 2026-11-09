@@ -169,7 +169,7 @@ h3 {
 }
 
 .hero {
-  padding: 88px 0 40px;
+  padding: 88px 0 96px;
   text-align: center;
 }
 
@@ -240,51 +240,6 @@ h3 {
 
 .text-link:hover {
   text-decoration: underline;
-}
-
-.ledger {
-  margin: 72px auto 24px;
-  max-width: 720px;
-  text-align: left;
-}
-
-.ledger-note {
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  margin-bottom: 8px;
-}
-
-.ledger-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.ledger-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  align-items: baseline;
-  padding: 16px 0;
-  border-top: 1px solid var(--line);
-}
-
-.ledger-kind {
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.ledger-detail {
-  color: var(--muted);
-  font-size: 14px;
-  margin-top: 2px;
-}
-
-.ledger-amt {
-  font-variant-numeric: tabular-nums;
-  font-weight: 600;
-  white-space: nowrap;
 }
 
 .section {
