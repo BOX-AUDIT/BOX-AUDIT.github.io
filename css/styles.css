@@ -298,9 +298,12 @@ h3 {
   gap: 40px 32px;
 }
 
-.diff-grid,
-.product-list {
+.diff-grid {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.product-list {
+  grid-template-columns: 1fr 1fr;
 }
 
 .leak-grid,
