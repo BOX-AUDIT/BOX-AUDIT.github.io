@@ -291,10 +291,18 @@ h3 {
   padding: 100px 0;
 }
 
+#services,
 #security,
-#products,
 .scan {
   background: var(--wash);
+}
+
+.kicker {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .steps {
