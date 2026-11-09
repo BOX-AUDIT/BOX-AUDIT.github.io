@@ -354,6 +354,12 @@ h3 {
   grid-template-columns: 1fr 1fr;
 }
 
+.who-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
 .chart {
   margin: 0 0 56px;
   background: var(--wash);
@@ -422,6 +428,7 @@ h3 {
 
 .diff-grid h3,
 .leak-grid h3,
+.who-list h3,
 .product h3,
 .approach-grid h3 {
   font-size: 21px;
@@ -431,6 +438,7 @@ h3 {
 
 .diff-grid p,
 .leak-grid p,
+.who-list p,
 .product p,
 .approach-grid p,
 .quiet-list,
@@ -606,6 +614,7 @@ textarea {
   .diff-grid,
   .product-list,
   .leak-grid,
+  .who-list,
   .approach-grid,
   .scan-grid,
   .footer-grid {
